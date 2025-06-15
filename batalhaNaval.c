@@ -10,8 +10,8 @@
 int main() {
     // criação da matriz do tabuleiro 10x10, inicialiada com 0 (água)
     int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
-    
 
+// Posições iniciais dos Navios
 
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
