@@ -48,7 +48,7 @@ for (int i = 0; i < TAM_NAVIO; i++) {
     tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] = NAVIO;             
 }
 
-
+// Impressão do cabeçalho de 'A' a 'J'
 
 
 
