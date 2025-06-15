@@ -12,12 +12,13 @@ int main() {
     int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
 
 // Posições iniciais dos Navios
-
-
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+// Cada navio ocupará 3 posições conforme o TAM_NAVIO
+// Será inserido um navio na horizontal, um na vertical e dois nas diagonais
+int linha_horizintal = 2, coluna_horizontal = 4; 
+int linha_vertical = 5, coluna_vertical = 7;
+int linha_diagonal1 = 0, coluna_diagonal1 = 0;
+int linha_diagonal2 = 7, coluna_diagonal2 =4;
+    
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
