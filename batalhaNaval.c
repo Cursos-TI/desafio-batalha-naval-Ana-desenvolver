@@ -14,10 +14,13 @@ int main() {
 // Posições iniciais dos Navios
 // Cada navio ocupará 3 posições conforme o TAM_NAVIO
 // Será inserido um navio na horizontal, um na vertical e dois nas diagonais
-int linha_horizintal = 2, coluna_horizontal = 4; 
-int linha_vertical = 5, coluna_vertical = 7;
-int linha_diagonal1 = 0, coluna_diagonal1 = 0;
-int linha_diagonal2 = 7, coluna_diagonal2 =4;
+int linha_horizintal = 2, coluna_horizontal = 4; // E3
+int linha_vertical = 5, coluna_vertical = 7;     // H6
+int linha_diagonal1 = 0, coluna_diagonal1 = 0;   // A1
+int linha_diagonal2 = 7, coluna_diagonal2 =4;    // E8
+
+// Verificação de limites, para garantir que nenhum navio ultrapasse os limites do tabuleiro
+if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO)
     
 
     // Nível Mestre - Habilidades Especiais com Matrizes
