@@ -27,12 +27,12 @@ if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
     printf("Erro: um ou mais navios ultrapassaram os limites do tabuleiro.\n");
     return 1;
     }
-     // Verifica sobreposição
-    for (int i = 0; i < TAM_NAVIO; i++) {
+ // Verificação de sobreposição
+for (int i = 0; i < TAM_NAVIO; i++) {
         if (tabuleiro[linha_horizontal][coluna_horizontal + i] == NAVIO ||
             tabuleiro[linha_vertical + i][coluna_vertical] == NAVIO ||
-            tabuleiro[linha_diag1 + i][coluna_diag1 + i] == NAVIO ||
-            tabuleiro[linha_diag2 + i][coluna_diag2 - i] == NAVIO) {
+            tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] == NAVIO ||
+            tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] == NAVIO) {
             printf("Erro: Sobreposição de navios detectada.\n");
             return 1;
         }
