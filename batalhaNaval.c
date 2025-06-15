@@ -2,17 +2,15 @@
 
 // Desafio Batalha Naval - MateCheck
 
-#define TAM_TABULEIRO 10 //Define o tamanho fixo do tabuleiro(10x10)
-#define TAM_NAVIO 3
-#define NAVIO 3
-
+#define TAM_TABULEIRO 10 // Tamanho do tabuleiro(10x10)
+#define TAM_NAVIO 3      // Tamanho fixo dos navios (3 posições)
+#define NAVIO 3          // 3 Representa uma parte do navio
+#define AGUA 0           // 0 Representa água
 
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
-
+    // criação da matriz do tabuleiro 10x10, inicialiada com 0 (água)
+    int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
+    
 
 
 
