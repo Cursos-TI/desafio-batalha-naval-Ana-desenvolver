@@ -8,7 +8,7 @@
 #define AGUA 0           // 0 Representa água
 
 int main() {
-    // criação da matriz do tabuleiro 10x10, inicialiada com 0 (água)
+    // criação da matriz do tabuleiro 10x10, inicializada com 0 (água)
     int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
 
 // Posições iniciais dos Navios
@@ -20,7 +20,13 @@ int linha_diagonal1 = 0, coluna_diagonal1 = 0;   // A1
 int linha_diagonal2 = 7, coluna_diagonal2 =4;    // E8
 
 // Verificação de limites, para garantir que nenhum navio ultrapasse os limites do tabuleiro
-if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO)
+if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
+    linha_vertical + TAM_NAVIO > TAM_TABULEIRO ||
+    linha_diagonal1 + TAM_NAVIO > TAM_TABULEIRO || coluna_diagonal1 + TAM_NAVIO > TAM_TABULEIRO ||
+    linha_diagonal2 + TAM_NAVIO > TAM_TABULEIRO || coluna_diagonal2 - (TAM_NAVIO - 1) < 0) {     
+    printf("Erro: um ou mais navios ultrapassaram os limites do tabuleiro.\n");
+    return 1;
+    }
     
 
     // Nível Mestre - Habilidades Especiais com Matrizes
