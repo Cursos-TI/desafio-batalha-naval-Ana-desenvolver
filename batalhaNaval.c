@@ -14,7 +14,7 @@ int main() {
 // Posições iniciais dos Navios
 // Cada navio ocupará 3 posições conforme o TAM_NAVIO
 // Será inserido um navio na horizontal, um na vertical e dois nas diagonais
-int linha_horizintal = 2, coluna_horizontal = 4; // E3
+int linha_horizontal = 2, coluna_horizontal = 4; // E3
 int linha_vertical = 5, coluna_vertical = 7;     // H6
 int linha_diagonal1 = 0, coluna_diagonal1 = 0;   // A1
 int linha_diagonal2 = 7, coluna_diagonal2 =4;    // E8
@@ -27,16 +27,26 @@ if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
     printf("Erro: um ou mais navios ultrapassaram os limites do tabuleiro.\n");
     return 1;
     }
- // Verificação de sobreposição
+ // Verificação de sobreposição, para garantir que os navios não sejam colocados em posições já ocupadas
 for (int i = 0; i < TAM_NAVIO; i++) {
         if (tabuleiro[linha_horizontal][coluna_horizontal + i] == NAVIO ||
             tabuleiro[linha_vertical + i][coluna_vertical] == NAVIO ||
             tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] == NAVIO ||
             tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] == NAVIO) {
             printf("Erro: Sobreposição de navios detectada.\n");
-            return 1;
+            return 1; // Encerra o programa com erro
         }
     }
+// Posicionando os navios no tabuleiro
+for (int i = 0; i < TAM_NAVIO; i++) {
+    tabuleiro[linha_horizontal][coluna_horizontal + i] = NAVIO;          // Horizontal
+    tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;              // Vertical
+    tabuleiro[linha_diag1 + i][coluna_diag1 + i] = NAVIO;                // Diagonal ↘
+    tabuleiro[linha_diag2 + i][coluna_diag2 - i] = NAVIO;                // Diagonal ↙
+}
+
+
+
 
 
     // Nível Mestre - Habilidades Especiais com Matrizes
