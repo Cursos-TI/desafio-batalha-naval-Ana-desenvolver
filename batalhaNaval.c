@@ -28,8 +28,9 @@ if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
     return 1;
     }
  // Verificação de sobreposição, para garantir que os navios não sejam colocados em posições já ocupadas
+ 
 for (int i = 0; i < TAM_NAVIO; i++) {
-        if (tabuleiro[linha_horizontal][coluna_horizontal + i] == NAVIO ||
+        if (tabuleiro[linha_horizontal][coluna_horizontal + i] == NAVIO || 
             tabuleiro[linha_vertical + i][coluna_vertical] == NAVIO ||
             tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] == NAVIO ||
             tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] == NAVIO) {
@@ -37,13 +38,17 @@ for (int i = 0; i < TAM_NAVIO; i++) {
             return 1; // Encerra o programa com erro
         }
     }
+
 // Posicionando os navios no tabuleiro
+// Preenche a matriz com o valor NAVIO (3) nas posições dos navios
 for (int i = 0; i < TAM_NAVIO; i++) {
-    tabuleiro[linha_horizontal][coluna_horizontal + i] = NAVIO;          // Horizontal
-    tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;              // Vertical
-    tabuleiro[linha_diag1 + i][coluna_diag1 + i] = NAVIO;                // Diagonal ↘
-    tabuleiro[linha_diag2 + i][coluna_diag2 - i] = NAVIO;                // Diagonal ↙
+    tabuleiro[linha_horizontal][coluna_horizontal + i] = NAVIO;          
+    tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;           
+    tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] = NAVIO;                
+    tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] = NAVIO;             
 }
+
+
 
 
 
