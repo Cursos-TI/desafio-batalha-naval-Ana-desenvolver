@@ -71,10 +71,11 @@ for (int i = 0; i < TAM_TABULEIRO; i++) {
     printf("%d |", i + 1); // Numeração das linhas (1 a 10)
 
     for (int j = 0; j < TAM_TABULEIRO; j++){
-        printf(" 2%d", tabuleiro[i][j]); // Imprime o conteúdo da célula (0 = água, 3 = navio)
+        printf(" %2d", tabuleiro[i][j]); // Imprime o conteúdo da célula (0 = água, 3 = navio)
     }
-    printf("  |\n"); // Fecha a linha com delimitador
+    printf(" |\n"); // Fecha a linha com delimitador
 }
+
 
 
 
