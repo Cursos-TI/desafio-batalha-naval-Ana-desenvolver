@@ -48,12 +48,20 @@ for (int i = 0; i < TAM_NAVIO; i++) {
     tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] = NAVIO;             
 }
 
-// Imprime o cabeçalho de 'A' a 'J'
-printf("    ");
+// Imprime o cabeçalho 
+printf("    "); 
 for (char letra = 'A'; letra < 'A' + TAM_TABULEIRO; letra++) {
-    printf("  %c", letra);
+    printf("  %c", letra); // Imprime letras de A até J
 }
 printf("\n");
+
+// Linha sepadora superior
+printf("   +-");
+for(int i = 0; i < TAM_TABULEIRO; i++) {
+    printf("---");
+}
+printf("+\n");
+
 
 
 
