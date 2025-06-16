@@ -8,7 +8,7 @@
 #define AGUA 0           // 0 Representa água
 
 int main() {
-    // criação da matriz do tabuleiro 10x10, inicializada com 0 (água)
+    // Criação da matriz do tabuleiro 10x10, inicializada com 0 (água)
     int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
 
 // Posições iniciais dos Navios
@@ -19,7 +19,7 @@ int linha_vertical = 5, coluna_vertical = 7;     // H6
 int linha_diagonal1 = 0, coluna_diagonal1 = 0;   // A1
 int linha_diagonal2 = 7, coluna_diagonal2 =4;    // E8
 
-// Verificação de limites, para garantir que nenhum navio ultrapasse os limites do tabuleiro
+// Verificação de limites: Para garantir que nenhum navio ultrapasse os limites do tabuleiro
 if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
     linha_vertical + TAM_NAVIO > TAM_TABULEIRO ||
     linha_diagonal1 + TAM_NAVIO > TAM_TABULEIRO || coluna_diagonal1 + TAM_NAVIO > TAM_TABULEIRO ||
@@ -27,9 +27,9 @@ if (coluna_horizontal + TAM_NAVIO > TAM_TABULEIRO ||
     printf("Erro: um ou mais navios ultrapassaram os limites do tabuleiro.\n");
     return 1;
     }
- // Verificação de sobreposição, para garantir que os navios não sejam colocados em posições já ocupadas
- 
-for (int i = 0; i < TAM_NAVIO; i++) {
+
+ // Verificação de sobreposição: Para garantir que os navios não sejam colocados em posições já ocupadas
+  for (int i = 0; i < TAM_NAVIO; i++) {
         if (tabuleiro[linha_horizontal][coluna_horizontal + i] == NAVIO || 
             tabuleiro[linha_vertical + i][coluna_vertical] == NAVIO ||
             tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] == NAVIO ||
@@ -48,9 +48,12 @@ for (int i = 0; i < TAM_NAVIO; i++) {
     tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] = NAVIO;             
 }
 
-// Impressão do cabeçalho de 'A' a 'J'
-
-
+// Imprime o cabeçalho de 'A' a 'J'
+printf("    ");
+for (char letra = 'A'; letra < 'A' + TAM_TABULEIRO; letra++) {
+    printf("  %c", letra);
+}
+printf("\n");
 
 
 
