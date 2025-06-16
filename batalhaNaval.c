@@ -76,8 +76,15 @@ for (int i = 0; i < TAM_TABULEIRO; i++) {
     printf(" |\n"); // Fecha a linha com delimitador
 }
 
+// Linha inferior
+printf("   +-");
+for (int i = 0; i < TAM_TABULEIRO; i++){
+    printf("---"); // Separação inferior 
+}
+printf("+\n");
 
-
+return 0; // Finaliza o programa com sucesso
+}
 
 
     // Nível Mestre - Habilidades Especiais com Matrizes
@@ -101,5 +108,4 @@ for (int i = 0; i < TAM_TABULEIRO; i++) {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
+   
